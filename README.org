@@ -1,3 +1,4 @@
 * avr-toolbox
   Random stull i've been playing with
 ** HT1632C chinese dev board
+  + avrdude -P /dev/ttyUSB0 -p m8 -c stk500v2  -U flash:w:main.bin
