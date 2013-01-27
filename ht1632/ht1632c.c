@@ -91,7 +91,7 @@ void HTsetup() {  //setting up the display
   HTcommand(HTledon);
   HTcommand(HTsetclock);
   HTcommand(HTsetlayout);
-  HTcommand(HTsetbright+(1<<1));
+  HTcommand(HTsetbright+(0<<1));
   HTcommand(HTblinkoff);
 }
 

@@ -14,7 +14,7 @@ UPLOAD_SPEED  ?= 115200
 UPLOAD_PORT   ?= /dev/ttyUSB0
 
 MCU_TARGET    ?= atmega8
-OPTIMIZE       = -O0
+OPTIMIZE       = -O2
 
 DEFS           = -DF_CPU=1000000L
 LIBS           =

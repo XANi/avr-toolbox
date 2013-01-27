@@ -34,10 +34,27 @@ int main() {
   //  HTcommand(HTsetbright + (2<<1) );
   HTleds[0]=2;
   HTleds[1]=6;
-  for (byte i=0;i<32;i++) HTleds[i]=0b11010101<<(i%2);  HTsendscreen();
+  for (byte i=0;i<15;i++) HTleds[i]=0b11010101<<(i%2);  HTsendscreen();
+  for (byte i=16;i<32;i++) HTleds[i]=0b10010111<<(i%2);  HTsendscreen();
+  _delay_ms(1000);
+  byte c=0;
   while(1) {
     //    _delay_ms(10);
-    for (byte i=0;i<32;i++) HTleds[i]=rand();  HTsendscreen();
+    char r;
+    if (c == 0 ) {
+      c = 1;
+      r = 1;
+    }
+    else {
+      c = 0;
+      r = 0;
+    }
+    for (byte i=0;i<32;i++)
+    {
+      HTleds[i]=r;
+      r++;
+    }
+    HTsendscreen();
   }
 
 }
